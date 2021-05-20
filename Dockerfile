@@ -3,6 +3,8 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app/
 
+
+RUN npm config set strict-ssl false
 RUN npm install --no-optional
 
 RUN chown -R 1001:0  /usr/src/app
